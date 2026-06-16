@@ -36,6 +36,15 @@ def  search_student():
             return
     print("student not found")
 
+def delete_student ():
+    name=input("enter student name to delete:")
+    for student in students:
+        if student["name"].lower()==name.lower():
+            students.remove(student)
+            print("student deleted successfully!")
+            return
+    print("student not found")
+
 while True:
     print("\nStudent Management System")
     print("1. Add Student")
